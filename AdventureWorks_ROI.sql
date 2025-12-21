@@ -88,7 +88,7 @@ GROUP BY
     p.pais,
     p.clave_territorio
 ORDER BY
-    p.clave_territorio, ingresos, costos;
+    p.clave_territorio, ingresos, costos
 
 --Se validan resultados y QA
 SELECT 
@@ -96,4 +96,5 @@ SELECT
     SUM(CASE WHEN v.clave_producto IS NULL THEN 1 ELSE 0 END) AS clave_producto,
     SUM(CASE WHEN v.clave_territorio IS NULL THEN 1 ELSE 0 END) AS clave_territorio
 FROM ventas_2017 AS v
+
 
